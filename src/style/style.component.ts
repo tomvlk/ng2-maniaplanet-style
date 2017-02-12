@@ -10,9 +10,15 @@ import { MPStyle } from './parser';
 export class StyleComponent implements OnInit, AfterViewInit {
   @ViewChild('mpstyleSpan') container: ElementRef;
 
-  @Input() raw: string;
+  private _raw: string;
   @Input() stripTags: Array<string> = [];
   @Input() useClasses: boolean = false;
+
+  @Input()
+  set raw (input:string) {
+    this._raw = input;
+    this.render();
+  }
 
   constructor() { }
 
@@ -20,6 +26,10 @@ export class StyleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.render();
+  }
+
+  public render() {
     const container = this.container.nativeElement;
 
     let options = {
