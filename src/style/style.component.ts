@@ -37,7 +37,7 @@ export class StyleComponent implements OnInit, AfterViewInit {
       stripTags: this.stripTags,
     };
 
-    container.innerHTML = MPStyle(this.raw, options);
+    container.innerHTML = MPStyle(this._raw, options);
   }
 
 }
