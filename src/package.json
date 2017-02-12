@@ -1,9 +1,8 @@
 {
   "name": "ng2-maniaplanet-style",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@angular/common": "*",
     "@angular/compiler": "*",
